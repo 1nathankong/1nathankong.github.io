@@ -1,2 +1,2 @@
-# 1nathankong.github.io
+# nathankong.github.io
 Personal Site from Scratch
