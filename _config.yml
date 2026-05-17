@@ -17,4 +17,4 @@ talkmap_link      : false
 # Add the Minimal Mistakes theme
 remote_theme      : "mmistakes/minimal-mistakes"
 plugins:
-  - jekyll-remote-theme
+  - jekyll-theme-minimal
