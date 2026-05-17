@@ -12,9 +12,6 @@ breadcrumbs       : false
 words_per_minute  : 160
 future            : true
 read_more         : "disabled"
-talkmap_link      : false
 
-# Add the Minimal Mistakes theme
-remote_theme      : "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-theme-minimal
+# The theme setting
+theme: jekyll-theme-minimal
