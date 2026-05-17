@@ -11,7 +11,7 @@ title                    : "Personal Site"
 title_separator          : "-"
 name                     : &name Nathan Kong
 description              : &description Builder with Interest in Autonomous Systems and Hardware-Software Codesign
-url                      : https://1nathankong.github.io 
+url                      : "https://1nathankong.github.io"
 baseurl                  : ""
 repository               : "1nathankong/1nathankong.github.io"
 teaser                   :  "castle_in_sky.png"
