@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Nathan Kong | Personal Site</title>
 
+    <!-- Style Section -->
     <style>
     body {
-      background-color: lightblue; /* You can use names, hex, or rgb */
+        background-color: lightblue;
+        font-family: Arial;
+        text-align:center;
+        margin: 0;
     }
     h1{
-        color: #000000;
+        color: #000;
         font-size: 30 px;
-        text-align: center;
     }
 
     ul {
             list-style-type:square;
-            padding-left:20px
+            padding-left:20px;
+            display: inline-block;
+            text-align: left;
         }
 
     li {
@@ -23,20 +29,51 @@
         margin-bottom:10px
     }
     
+    #main {
+        display: none;
+    }
+
+    #intro {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    
     </style>
 </head>
-<div style="text-align: center;"
-<body>
+
+<!-- Intro Page-->
+<div id = "intro">
+    <button id="start">Click to Start</button>
+</div>
+
+<!-- Main Site -->
+<div id = "main">
     <h1>Nathan Kong</h1>
     <p> Builder with an interest in Autonomous Systems and Hardware-Software Codesign.</p>
-    <hr>
-    <h3>Projects & Interests</h3>
-    <ul>
-        <li>Autonomous Systems</li>
-        <li>Hardware-Software Codesign</li>
-    </ul>
+    <img src="myself.png" alt="Personal Image" style="width:400px;">
+</div>
 
-    <img src="castle_in_sky.png" alt="Teaser Image" style="max-width:100%; height:auto;">
-</body>
+<!-- Audio Section -->
+<audio id = "bgmusic" loop>
+    <source src = "song1.mp3" type = "audio/mp3">
+</audio>
+
+<!-- Script to implement music -->
+<script>
+    document.addEventListener("click", function() {
+        document.getElementById("bgmusic").play();
+        document.getElementById("intro").style.display = "none";
+        document.getElementById("main").style.display = "block";
+    });                                                                                                                                       
+</script>
 </div>
 </html>
