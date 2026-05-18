@@ -1,111 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Kong</title>
-
-    <!-- Style Section -->
+    <meta charset="UTF-8"><title>Kong</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-    body {
-        background-color: #2B445B;
-        font-family: Arial, sans-serif;
-        text-align:center;
-        margin: 0;
-    }
-    h1{
-        font-size: 48px;
-        margin-bottom: 10px;
-        color: rgb(255, 255, 255);
-        letter-spacing: 1px;
-    }
-
-    ul {
-            list-style-type:square;
-            padding-left:20px;
-            display: inline-block;
-            text-align: left;
-        }
-
-    li {
-        font-size: 18px;
-        margin-bottom:10px
-    }
-
-    a {
-    color: rgb(255, 255, 255);
-    }
-
-    
-    #main {
-        display: none;
-        color: white;
-    }
-
-    #intro {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    button {
-        padding: 15px 32px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        background: #2B445B;
-        color: white;
-        cursor: pointer;
-        transition: 0.2s ease;
-    }
-
+        body { background: #2B445B; font-family: Arial, sans-serif; text-align: center; margin: 0; color: white; }
+        h1 { font-size: 48px; margin-bottom: 10px; letter-spacing: 1px; }
+        a { color: white; text-decoration: none; }
+        #main { display: none; }
+        #intro { height: 100vh; display: flex; justify-content: center; align-items: center; }
+        button { padding: 15px 32px; font-size: 18px; border: none; border-radius: 10px; background: #2B445B; color: white; cursor: pointer; transition: .2s; }
+        .fab, .fas { font-size: 50px; }
     </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<!-- Intro Page-->
-<div id = "intro">
-    <button id="start">Click to Start and Turn up Volume</button>
-</div>
-
-<!-- Main Site -->
-<div id = "main">
-    
-    <h1>Nathan Kong</h1>
-    <p> Builder with an interest in Autonomous Systems and Hardware-Software Codesign.</p>
-    <img src="myself.png" alt="Personal Image" style="width:400px;">
-    
-    <h3>Links</h3>
-    <p>
-        
-        <a href="https://linkedin.com/in/nathankong999" target="_blank">
-            <i class="fab fa-linkedin", style="font-size:50px;"></i>
-        </a>
-    
-        <a href="https://github.com/1nathankong" target="_blank">
-            <i class="fab fa-github", style="font-size:50px;"></i>
-        </a>
-    
-        <a href="nathankong2026v1.pdf" target="_blank">
-            <i class="fas fa-file", style="font-size:50px;"></i>
-        </a>
-    </p>
-
-</div>
-
-<!-- Audio Section -->
-<audio id = "bgmusic" loop>
-    <source src = "song1.mp3" type = "audio/mp3">
-</audio>
-
-<!-- Script to implement music -->
-<script>
-    document.addEventListener("click", function() {
-        document.getElementById("bgmusic").play();
-        document.getElementById("intro").style.display = "none";
-        document.getElementById("main").style.display = "block";
-    });                                                                                                                                       
-</script>
-</div>
+<body>
+    <div id="intro"><button id="start">Click to Start and Turn up Volume</button></div>
+    <main id="main">
+        <h1>Nathan Kong</h1>
+        <p>Builder with an interest in Autonomous Systems and Hardware-Software Codesign.</p>
+        <img src="myself.png" alt="Nathan Kong" style="width:400px;">
+        <h3>Links</h3>
+        <p>
+            <a href="https://linkedin.com/in/nathankong999" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/1nathankong" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="nathankong2026v1.pdf" target="_blank" rel="noopener"><i class="fas fa-file"></i></a>
+        </p>
+    </main>
+    <audio id="bgmusic" loop><source src="song1.mp3" type="audio/mp3"></audio>
+    <script>
+        document.getElementById("start").addEventListener("click", () => {
+            document.getElementById("bgmusic").play().catch(e => {});
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        });
+    </script>
+</body>
 </html>
